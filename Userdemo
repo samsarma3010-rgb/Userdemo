@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class User {
+    String username;
+    String email;
+
+    // Method for registration
+    void register(String uname, String mail) {
+        username = uname;
+        email = mail;
+    }
+
+    // Method to display profile
+    void displayProfile() {
+        System.out.println("----- User Profile -----");
+        System.out.println("Username: " + username);
+        System.out.println("Email: " + email);
+    }
+}
+
+public class UserDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Create User object
+        User u1 = new User();
+
+        // Take input from user
+        System.out.print("Enter username: ");
+        String uname = sc.nextLine();
+        System.out.print("Enter email: ");
+        String mail = sc.nextLine();
+
+        // Register user
+        u1.register(uname, mail);
+
+        // Display profile
+        u1.displayProfile();
+
+        sc.close();
+    }
+}
